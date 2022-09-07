@@ -1,7 +1,9 @@
 [
   {
     "platformVersion": "0.49.x",
-    "targetNativeDependencies": [],
+    "targetNativeDependencies": [
+      "react-native-orientation-locker@1.5.0"
+    ],
     "targetJsDependencies": [
       "react@17.0.2"
     ]

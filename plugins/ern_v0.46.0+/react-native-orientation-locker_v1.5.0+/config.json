@@ -1,0 +1,31 @@
+{
+  "android": {
+    "root": "android",
+    "dependencies": []
+  },
+  "ios": {
+    "copy": [
+      {
+        "dest": "{{{projectName}}}/Libraries/RCTOrientation",
+        "source": "iOS/*"
+      }
+    ],
+    "pbxproj": {
+      "addHeaderSearchPath": [
+        "\"$(SRCROOT)/{{{projectName}}}/Libraries/RCTOrientation/**\""
+      ],
+      "addProject": [
+        {
+          "group": "Libraries",
+          "path": "RCTOrientation/RCTOrientation.xcodeproj",
+          "staticLibs": [
+            {
+              "name": "libRCTOrientation.a",
+              "target": "RCTOrientation"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
