@@ -1,0 +1,31 @@
+{
+  "android": {
+    "root": "android",
+    "dependencies": []
+  },
+  "ios": {
+    "copy": [
+      {
+        "dest": "{{{projectName}}}/Libraries/BVLinearGradient",
+        "source": "ios/*"
+      }
+    ],
+    "pbxproj": {
+      "addHeaderSearchPath": [
+        "\"$(SRCROOT)/{{{projectName}}}/Libraries/BVLinearGradient/**\""
+      ],
+      "addProject": [
+        {
+          "group": "Libraries",
+          "path": "BVLinearGradient/BVLinearGradient.xcodeproj",
+          "staticLibs": [
+            {
+              "name": "libBVLinearGradient.a",
+              "target": "BVLinearGradient"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
